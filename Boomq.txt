@@ -1,0 +1,247 @@
+http://77.50.236.215:48990/dashboards
+
+(users)
+owner_gr4@our.group
+Wsx321!@#
+
+test_0004
+test_0004@mail.ru
+
+bambucha
+bambucha@mail.ru
+qwert1234
+
+sherbakov_110
+sherbakov_110@our.group
+Wsx321!@#
+(users end)
+
+
+
+в Loadrunner надо было взять все UC и сгруппировать все в одну
+Start Test with Launch Test 10 op/h
+16:20
+18:00
+
+
+UC01_Register_TR01_mainPage
+UC01_Register_TR02_login_as_admin
+UC01_Register_TR03_nagruzka
+UC01_Register_TR04_edit
+UC01_Register_TR05_add_new_team_member
+UC01_Register_TR06_copy_link
+UC01_Register_TR07_athorize_new_user
+UC01_Register_TR08_create_password
+UC01_Register_TR09_logout
+
+
+
+UC02_CreateTest
+UC02_CreateTest_TR01_mainPaige
+UC02_CreateTest_TR02_login 
+UC02_CreateTest_TR03_tests
+UC02_CreateTest_TR04_add_new_test
+UC02_CreateTest_TR05_load_pofile
+UC02_CreateTest_TR06_back_to_tests
+
+
+UC03_TestLauch
+UC03_TestLauch_TR01_mainPage
+UC03_TestLauch_TR02_loggin
+UC03_TestLauch_TR03_tests
+UC03_TestLauch_TR04_lanch
+UC03_TestLauch_TR05_run_test
+UC03_TestLauch_TR06_loggout
+
+
+
+UC04_CreateReport
+UC04_CreateReport_TR01_mainPage
+UC04_CreateReport_TR02_login
+UC04_CreateReport_TR03_reports
+UC04_CreateReport_TR04_add_new_report
+UC04_CreateReport_TR05_add_items
+UC04_CreateReport_TR06_back_to_reports
+UC04_CreateReport_TR07_logout
+
+UC05__CreateSummary
+UC05__CreateSummary_TR01_mainPaige
+UC05__CreateSummary_TR02_login
+UC05__CreateSummary_TR03_trends
+UC05__CreateSummary_TR04_new_trend
+UC05__CreateSummary_TR05_select_test
+UC05__CreateSummary_TR06_add_charts_tables
+UC05__CreateSummary_TR07_save
+UC05__CreateSummary_TR08_check_trends
+UC05__CreateSummary_TR09_logout
+
+
+
+
+Grafana
+77.50.236.215:48990 - 3001
+77.50.236.215:48991 - 3002
+77.50.236.215:48992 - 3003
+77.50.236.215:48993 - 3004
+77.50.236.215:48994 - 3005
+77.50.236.215:48995 - 3006
+
+Заглушки
+77.50.236.215:48996 - 8081
+77.50.236.215:48997 - 8082
+77.50.236.215:48998 - 8083
+77.50.236.215:48999 - 8084
+77.50.236.215:49000 - 8085
+
+Инфлакс
+77.50.236.215:49001 - 8086
+77.50.236.215:49002 - 8087
+77.50.236.215:49003 - 8088
+77.50.236.215:49004 - 8089
+77.50.236.215:49005 - 8090
+
+
+Запуск 4-13 9.28.2024    Scenario0 Здесь надо первоначальные данные которые были.!!!!!!!!!!!!!!!!!!!!!!!!! что бы были ошибки и в трендах и в запусках
+Регистрация		195	10	92.3
+Создание отчета		780	8,6	23
+Создание теста		1170	5,8	15.3
+Создание тренда		1170	7	15.3
+Запуск теста		351	6,1	51,2
+
+
+
+
+Запуск 3:50 ( утра)  Scenario1 Здесь уже были пофиксины фигнюшки с трендами 
+Регистрация		195	10	92.3
+Создание отчета		780	8,6	23
+Создание теста		1170	5,8	15.3
+Создание тренда		1170	7	15.3
+Запуск теста		351	6,1	51,2
+
+Scenario1 (it's when i ran test with fixed trends and normal pacing)
+{
+25 minutes of the test i started to have the same error like with trends (JavaScript bug).... so there is no point to continues
+Страница с тестами заполняется и начинает некоректно работать. Оно не может. 
+А вот и респонс был вот такой:
+{"exceptionMessage":"INVALID_LICENSE_FOR_INSTALLATION_TEST_CONCURRENT_COUNT","description":"License violation: too many concurrent tests running on installation"}
+
+нету смысла продолжать и пытаться выполнить так как на сайте функциональная ошибка
+
+? Посмотреть на сколько запусков стали появляться ошибки и записать.
+
+}
+
+Запуск 2 4:55 ( утра) Scneario2  (И тут нам сказали что тогда запускайте запуск теста 10 оп/ч)
+Регистрация		195	10	92.3
+Создание отчета		780	8,6	23
+Создание теста		1170	5,8	15.3
+Создание тренда		1170	7	15.3 = 
+Запуск теста		10	6,1	1800  тут оставил только 10
+
+
+
+Запуск 3 2:15 (утра) Scnerio 3 (подтверждение scenario 2) что мы начинаем чпокаться на 28 или какойто там минуте
+Регистрация		195	10	92.3
+Создание отчета		780	8,6	23
+Создание теста		1170	5,8	15.3
+Создание тренда		1170	7	15.3 = 
+Запуск теста		10	6,1	1800  тут оставил только 10
+
+
+Запуск4 5:23  (утра) Scenario4 (~45 ОЧ мб чуть меньше для проверки системы что бы было 8 запущенных и 40 виселов)
+
+Регистрация		195	10	92.3
+Создание отчета		780	8,6	23
+Создание теста		1170	5,8	15.3
+Создание тренда		1170	7	15.3 = 
+Запуск теста		45	6,1	400 s  тут новое значение
+
+
+Запуск5  Scenario5 (Confirm test); выявил что порог после 6 ступени. Значит 30 пользователей надо пустить в нагрузку.
+
+Регистрация		195	10	92.3
+Создание отчета		780	8,6	23
+Создание теста		1170	5,8	15.3
+Создание тренда		1170	7	15.3 = 
+Запуск теста		45	6,1	400 s  тут новое значение
+
+Запуск6 11:50 вечера  Scenario6 (Confirm test); выявил что порог после 6 ступени. Значит 35 пользователей надо пустить в нагрузку.
+
+Регистрация		195	10	92.3
+Создание отчета		780	8,6	23
+Создание теста		1170	5,8	15.3
+Создание тренда		1170	7	15.3 = 
+Запуск теста		45	6,1	400 s  тут новое значение
+
+
+
+
+
+					Вопрсосы :	
+
+			методика нагрузочного тестирования
+14.Название компонента  - это что писать?
+Вот у нас в Экспресс отчете есть цель проведения теста а где она в методике?
+А как сделать что бы на графике был отображен 90% персантиль
+Как сделать что бы например у нас награфике была линия с допустимым значениями сколько должна идти транзакция
+Я понял как и где время отклика увеличивается что не соответствует с бизнес критериям. Но не могу понять из-за чего.
+Что такое в Disk All Partition Usage в BoomQ она достигает 80 %  а в BoomQ Generator  6%
+
+Можно же залеть в boomq и посмотреть что там за жесткий диск
+Спросить у Ильи , как он сделал графики с ошибками.
+
+
+
+Action.c(47): Error -27792: Failed to connect to server "dev-boomq.pflb.ru:443": [10060] Connection timed out
+Action.c(441): Error -26612: HTTP Status-Code=500 (Internal Server Error) for "https://dev-boomq.pflb.ru/test-srv/slaReportProfile"
+
+
+
+
+
+
+
+Jmeter:
+
+boomq_auth=([^;]+);
+boomq_auth=([^\r\n]+)
+
+
+X-Amz-Algorithm	AWS4-HMAC-SHA256	false	text/plain	true
+X-Amz-Credential	AKIAIOSFODNN7EXAMPLE/20240922/us-east-1/s3/aws4_request	true	text/plain	true
+X-Amz-Date	20240922T153356Z	false	text/plain	true
+X-Amz-Expires	604800	false	text/plain	true
+X-Amz-SignedHeaders	host	false	text/plain	true
+X-Amz-Signature	cc71555f9133ae15e2f557c5e3f8b67209501ff4c50a7832be79d0944315a04e	false	text/plain	true
+
+
+
+
+
+
+Action.c(43): Error -27776: [GENERAL_MSG_CAT_SSL_ERROR]connect to host "dev-boomq.pflb.ru" failed: [10054] Connection reset by peer
+This is probably because the SSL protocol version is not supported. Try switching the TLS/SSL version using "web_set_sockets_option" API.
+
+Action.c(43): Error -27776: [GENERAL_MSG_CAT_SSL_ERROR]connect to host "dev-boomq.pflb.ru" failed: [10054] Connection reset by peer
+This is probably because the SSL protocol version is not supported. Try switching the TLS/SSL version using "web_set_sockets_option" API.
+
+Системные метрики Boomq
+General:
+Утилизация CPU:
+Утилизация CPU по ядрам:
+Утилизация памяти:
+Утилизация дисковой подсистемы:
+Системные метрики - Boomq Generator
+General:
+Утилизация CPU:
+Утилизация CPU по ядрам:
+Утилизация памяти:
+Утилизация дисковой подсистемы:
+Системные метрики - Сервер Заглушки + Мониторинг
+General:
+Утилизация CPU:
+Утилизация CPU по ядрам:
+Утилизация памяти:
+Утилизация дисковой подсистемы:
+
+
